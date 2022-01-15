@@ -81,12 +81,14 @@ export default {
   },
 
   generate: {
-    routes () {
-      return axios.get('https://61e273373050a1001768218f.mockapi.io/id').then((res) => {
-        return res.data.map((data) => {
-          return data.id
-        })
-      })
-    }
+    fallback: true
+    // routes () {
+    //   return axios.get('https://61e273373050a1001768218f.mockapi.io/id').then((res) => {
+    //     return res.data.map((data) => {
+    //       return data.id
+    //     })
+    //   })
+    
+    // }
   }
 }
